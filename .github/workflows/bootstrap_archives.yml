@@ -28,7 +28,7 @@ jobs:
       - name: Git clone
         uses: actions/checkout@v4
       - name: Create bootstrap archive
-        run: ./scripts/generate-bootstraps.sh --architectures ${{ matrix.arch }}
+        run: ./scripts/generate-bootstraps.sh --architectures ${{ matrix.arch }} --add termux-x11-nightly
       - name: Store artifacts
         uses: actions/upload-artifact@v4
         with:
